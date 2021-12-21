@@ -1,0 +1,12 @@
+{% extends "myapp/base.html"%}
+{% block content%}
+    <form method="POST">
+        {% csrf_token %}
+        <legend>Are You sure you want to delete {{ object.name }}'s data</legend>
+        <div>
+            <input class="btn btn-outline-danger" type="submit" value="YES">
+            <a href="{% url 'detail' object.id %}">NO</a>
+        </div>
+    </form>
+          
+{% endblock content%}

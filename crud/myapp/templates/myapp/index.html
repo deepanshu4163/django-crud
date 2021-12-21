@@ -1,0 +1,17 @@
+{% extends "myapp/base.html"%}
+{% block content%}
+
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>DOB</th>  
+        </tr>
+        {% for person in person %}
+            <tr>
+                <td><a href="{% url 'detail' person.id %}">{{person.name|capfirst}}</a></td>
+                <td>{{person.date_of_birth |date:'d M, Y'}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+      
+{% endblock content%}

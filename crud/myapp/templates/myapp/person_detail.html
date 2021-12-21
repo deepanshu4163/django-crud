@@ -1,0 +1,24 @@
+{% extends "myapp/base.html"%}
+{% block content%}
+
+    <div>
+        <dl class="row">
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">{{person.name|capfirst}}</dd>
+            
+            <dt class="col-sm-3">Date of Birth</dt>
+            <dd class="col-sm-9">{{person.date_of_birth |date:'d F, Y'}}</dd>
+          
+            <dt class="col-sm-3">Address</dt>
+            <dd class="col-sm-9">{{person.address}}</dd>
+            
+
+        </dl>
+    </div>
+
+    <div id="update">
+        <a class="btn btn-secondary" href="{% url 'update' object.id %}">Update</a>
+        <a class="btn btn-danger" href="{% url 'delete' object.id%}">Delete</a>
+    </div>
+      
+{% endblock content%}
