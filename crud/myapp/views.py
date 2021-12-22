@@ -38,7 +38,7 @@ class PersonUpdateView(UpdateView):
 #delete confirmation page
 class PersonDeleteView(DeleteView):
     model = Person
-    success_url = '/myapp'  #to let django know where we want to go after deleting the data
+    success_url = '/'  #to let django know where we want to go after deleting the data
 
 #function based about page
 def about(request):

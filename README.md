@@ -15,9 +15,9 @@ Quick start
         'myapp',
     ]
 
-2. Include the polls URLconf in your project urls.py like this::
+2. Include the myapp URLconf in your project urls.py like this::
 
-    path('polls/', include('myapp.urls')),
+    path('', include('myapp.urls')),
 
 3. Run ``python manage.py migrate`` to create the Person models.
 
